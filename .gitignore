@@ -1,0 +1,12 @@
+# To avoid uploading the node_modules folder, filled with node.js packages:
+node_modules/
+
+# To avoid uploading the local build folder:
+build/
+
+#npm debug log
+npm-debug.log
+
+.ds_store
+
+.vscode
