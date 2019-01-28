@@ -1,0 +1,28 @@
+{
+  "name": "metalsmith-var-replace",
+  "version": "0.0.1",
+  "description": "A Metalsmith plugin",
+  "keywords": [
+    "metalsmith",
+    "plugin"
+  ],
+  "author": "GrapeCity",
+  "license": "MIT",
+  "main": "lib",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "clear && node 'lib/index' test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrapeCity/metalsmith-var-replace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GrapeCity/metalsmith-var-replace/issues"
+  },
+  "homepage": "https://github.com/GrapeCity/metalsmith-var-replace#readme",
+  "directories": {
+    "test": "test"
+  }
+}
