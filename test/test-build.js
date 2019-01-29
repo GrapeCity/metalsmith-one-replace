@@ -10,11 +10,18 @@ metalsmith(__dirname)
       enabled: true,
       actions: [{
         priority: 1,
-        type: 'file',
-        keyword: '^{#insert (.*)}',
-        filePattern: '.md$',
-        removeFile: true
-      }]
+        type: 'file'
+      },{
+        priority: 2,
+        type: 'var',
+        keyValues: {
+          'f1':'Apple',
+          'f2':'Orange',
+          'f3':'Banana',
+          'f4':'Grapes'
+        }
+      }
+    ]
     }))
     .use(markdown())
     .use(permalinks())
