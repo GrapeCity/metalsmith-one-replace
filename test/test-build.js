@@ -9,10 +9,10 @@ metalsmith(__dirname)
       consoleOutput: true,
       enabled: true,
       actions: [{
-        priority: 1,
+        priority: 10,
         type: 'file'
       },{
-        priority: 2,
+        priority: 20,
         type: 'var',
         keyValues: {
           'f1':'Apple',
@@ -20,6 +20,16 @@ metalsmith(__dirname)
           'f3':'Banana',
           'f4':'Grapes'
         }
+      },{
+        priority: 1,
+        type: 'remove',
+        filePattern: '.svg$',
+        rmPatterns: [
+          '\<![ \r\n\t]*(--([^\-]|[\r\n]|-[^\-])*--[ \r\n\t]*)\>',
+          '(xml([a-z:-A-Z0-9]+))=[\"]?((?:.(?![\"]?\s+(?:\S+)=|[>\"]))+.)[\"]?',
+          '^\s*$(?:\r\n?|\n)',
+          '([a-z:-A-Z0-9]+)="null"?'
+        ]
       }
     ]
     }))
