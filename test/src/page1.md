@@ -7,7 +7,7 @@ f4: Mango
 
 # Test Content
 
-Some text. Insert content from another file in the following paragraph.
+Some text. Insert content from another file in the following paragraph (with two leading blank lines).
 
 {#insert insert1.svg}
 
