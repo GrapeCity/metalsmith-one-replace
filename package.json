@@ -9,7 +9,12 @@
   "author": "GrapeCity",
   "license": "MIT",
   "main": "lib",
-  "dependencies": {},
+  "dependencies": {
+    "metalsmith": "^2.3.0",
+    "metalsmith-markdown": "^1.1.0",
+    "metalsmith-permalinks": "^2.0.0",
+    "metalsmith-templates": "^0.7.0"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "node 'lib/index' test"
