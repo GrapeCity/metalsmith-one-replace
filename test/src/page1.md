@@ -1,5 +1,6 @@
 ---
 title: test page 1
+permalink: false
 ---
 
 # Test Content

@@ -5,6 +5,17 @@ var permalinks = require('metalsmith-permalinks');
 var vreplace = require('..');
 
 metalsmith(__dirname)
+    .use(vreplace({
+      consoleOutput: true,
+      enabled: true,
+      actions: [{
+        priority: 1,
+        type: 'file',
+        keyword: '^{#insert (.*)}',
+        filePattern: '.md$',
+        removeFile: true
+      }]
+    }))
     .use(markdown())
     .use(permalinks())
     .clean(true)
