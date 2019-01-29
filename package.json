@@ -12,7 +12,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "clear && node 'lib/index' test"
+    "test": "node 'lib/index' test"
   },
   "repository": {
     "type": "git",
