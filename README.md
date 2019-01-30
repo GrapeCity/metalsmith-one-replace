@@ -6,15 +6,15 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
 
 ## Config
 
-```json
+```js
 {
     consoleOutput: false,
     enabled: true,
     actions: [{
-        priority: 2,
+        priority: 10,
         type:'file'
         },{
-        priority: 3,
+        priority: 20,
         type:'var',
         keyValues:{
             'f1':'Apple',
@@ -23,9 +23,18 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
         },{
         priority: 1,
         type:'replace',
+        filePattern:'.svg$',
+        regPatterns:{
+            '^\s*$':'',
+            '<(([a-z]+)*[^>]+)\/>':'<$1></$2>',
+            '([a-z:-A-Z0-9]+)="null"?([ ]+)?':''
+        },{
+        priority:5,
+        type:'replace',
         filePattern:'.md$',
         regPatterns:{
-            '^\s*$':''
+            '{#img (.*?)}':'<img $1>',
+            '{#bold (.*?)}':'<b>$1</b>'
         }
     ]
 }
