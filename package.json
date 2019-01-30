@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node 'lib/index' test"
+    "test": "node 'test/test-build'"
   },
   "repository": {
     "type": "git",
