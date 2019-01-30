@@ -4,7 +4,9 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
 
 ## Config
 
+Example
 ```js
+...
 {
     consoleLog: false,
     enabled: true,
@@ -37,6 +39,7 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
         }
     ]
 }
+...
 ```
 
 More information about config attributes:
@@ -51,8 +54,11 @@ More information about config attributes:
     * attributes when `type` is `var`
       * `keyRegex` (optional regex string default:`{#var (.*?)}`) - regex to find the tag (example `{#var}`) with the variable name as the parameter
       * `varValues` (key-value pair object) is mandatory - with variable name and it's value as key-value pair
+      * `ignoreMissing` (optional boolean default:`false`) - ignore (by substituting it with blank) if the variable is not defined
     * attributes when `type` is `file`
       * `keyRegex` (optional regex string default:`^{#insert (.*)}`) - regex to find the tag (example `{#insert}`) with the name of the file (with path) as parameter
+      * `ignoreMissing` (optional boolean default:`false`) - ignore (by substituting it with blank) if the file is not found
+      * `removeFile` (optional boolean default:`true`) - remove the file from target folder after inserting the content
     * attributes when `type` is `replace`
       * `replacePatterns` (key-value pair object) is mandatory - regex find and replace string as key-value pair
 
