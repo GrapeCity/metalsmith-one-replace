@@ -8,7 +8,7 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
 
 ```js
 {
-    consoleOutput: false,
+    consoleLog: false,
     enabled: true,
     actions: [{
         priority: 10,
@@ -29,6 +29,7 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
             '<(([a-z]+)*[^>]+)\/>':'<$1></$2>',
             '([a-z:-A-Z0-9]+)="null"?([ ]+)?':''
         },{
+        enabled: false,
         priority:5,
         type:'replace',
         filePattern:'.md$',
@@ -39,6 +40,13 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
     ]
 }
 ```
+
+Defaults values of some of the config attributes are:
+
+* `consoleLog` (boolean) defaults to `false`
+* `enabled` (boolean) defaults to `true`
+* `actions` (array of objects) is mandatory
+  * `priority` (number) is optional
 
 ## CLI Usage
 

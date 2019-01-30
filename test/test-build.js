@@ -6,7 +6,7 @@ var vreplace = require('..');
 
 metalsmith(__dirname)
     .use(vreplace({
-      consoleOutput: true,
+      consoleLog: true,
       enabled: true,
       actions: [{
         priority: 10,
@@ -21,6 +21,7 @@ metalsmith(__dirname)
           'f4':'Grapes'
         }
       },{
+        enabled: false,
         priority: 1,
         type: 'replace',
         filePattern: '.svg$',
