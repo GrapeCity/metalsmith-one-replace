@@ -14,7 +14,7 @@ metalsmith(__dirname)
       },{
         priority: 20,
         type: 'var',
-        keyValues: {
+        varValues: {
           'f1':'Apple',
           'f2':'Orange',
           'f3':'Banana',
@@ -24,8 +24,8 @@ metalsmith(__dirname)
         enabled: false,
         priority: 1,
         type: 'replace',
-        filePattern: '.svg$',
-        regPatterns: {
+        fileFilter: '.svg$',
+        replacePatterns: {
           '<(([a-z]+)*[^>]+)\/>':'<$1></$2>',
           '([ \t]+)?\<![ \r\n\t]*(--([^\-]|[\r\n]|-[^\-])*--[ \r\n\t]*)\>([ \r\n\t]+)?':'',
           '(xml([a-z:-A-Z0-9]+))=[\"]?((?:.(?![\"]?\s+(?:\S+)=|[>\"]))+.)[\"]?([ ]+)?':'',
@@ -35,8 +35,8 @@ metalsmith(__dirname)
       },{
         priority: 5,
         type: 'replace',
-        filePattern: '.md$',
-        regPatterns: {
+        fileFilter: '.md$',
+        replacePatterns: {
           '{#img (.*?)}':'<img $1>',
           '{#bold (.*?)}':'<b>$1</b>'
         }

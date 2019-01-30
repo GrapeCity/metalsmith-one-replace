@@ -2,8 +2,6 @@
 
 A Metalsmith/markdown plugin for multiple type of replace (inserting content from other file, variable substitution, regex replacement) within the markdown files.
 
-## Installation
-
 ## Config
 
 ```js
@@ -23,7 +21,7 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
         },{
         priority: 1,
         type:'replace',
-        filePattern:'.svg$',
+        fileFilter:'.svg$',
         regPatterns:{
             '^\s*$':'',
             '<(([a-z]+)*[^>]+)\/>':'<$1></$2>',
@@ -32,7 +30,7 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
         enabled: false,
         priority:5,
         type:'replace',
-        filePattern:'.md$',
+        fileFilter:'.md$',
         regPatterns:{
             '{#img (.*?)}':'<img $1>',
             '{#bold (.*?)}':'<b>$1</b>'
@@ -41,16 +39,26 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
 }
 ```
 
-Defaults values of some of the config attributes are:
+More information about config attributes:
 
-* `consoleLog` (boolean) defaults to `false`
-* `enabled` (boolean) defaults to `true`
-* `actions` (array of objects) is mandatory
-  * `priority` (number) is optional
+* `consoleLog` (optional boolean default:`false`) - to log the info to console
+* `enabled` (optional boolean default:`true`) - to enable/disable the entire plugin
+* `actions` (array of action objects) is mandatory
+  * `priority` (optional number) - to specify the sequence order while processing
+  * `enabled` (optional boolean default:`true`) - to enable/disable a specific action
+  * `fileFilter` (optional regex string default:`(.*?)`) - to filter files for processing under a specific action
+  * `type` (string values are `var`, `file`, and `replace`) is mandatory - to specify the routine while processing
+    * attributes when `type` is `var`
+      * `keyRegex` (optional regex string default:`{#var (.*?)}`) - regex to find the tag (example `{#var}`) with the variable name as the parameter
+      * `varValues` (key-value pair object) is mandatory - with variable name and it's value as key-value pair
+    * attributes when `type` is `file`
+      * `keyRegex` (optional regex string default:`^{#insert (.*)}`) - regex to find the tag (example `{#insert}`) with the name of the file (with path) as parameter
+    * attributes when `type` is `replace`
+      * `replacePatterns` (key-value pair object) is mandatory - regex find and replace string as key-value pair
 
-## CLI Usage
+## Documentation
 
-## Javascript Usage
+Refer to the [wiki](https://github.com/GrapeCity/metalsmith-var-replace/wiki)
 
 ## License
 
