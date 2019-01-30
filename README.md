@@ -6,10 +6,17 @@ A Metalsmith/markdown plugin for multiple type of replace (inserting content fro
 
 ## Config
 
->{
->consoleOutput: false,
->enabled: true
->}
+~~~json
+{
+    consoleOutput: false,
+    enabled: true,
+    actions: [{
+        priority: 1,
+        type: file
+        }
+    ]
+}
+~~~
 
 ## CLI Usage
 
