@@ -17,8 +17,8 @@
   <text style="cursor: move;" fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="22" y="67.9625" id="svg_9" font-size="14" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" font-weight="normal">If you don't have a GrapeSEED account, you will need an invitation from a</text>
   <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="33.46094" y="88.9625" id="svg_11" font-size="14" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" font-weight="normal">school. Scan the QR code or click here to register your invitation code.</text>
   <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="72.5" y="147.9594" id="svg_12" font-size="14" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" font-weight="normal">Password</text>
-  <rect stroke="#ccc" fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="209.00001" y="132.95003" width="199.99999" height="19.99999" id="svg_15"></rect>
-  <rect stroke="#ccc" fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="197.00001" y="167.95003" width="99.99999" height="22.99999" id="svg_16"></rect>
+  <rect stroke="#ccc" fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="209.00001" y="132.95003" width="199.99999" height="19.99999" id="svg_15"/>
+  <rect stroke="#ccc" fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="197.00001" y="167.95003" width="99.99999" height="22.99999" id="svg_16"/>
   <text font-style="italic" fill="#0000ff" stroke="#ccc" stroke-width="0" stroke-opacity="null" x="353.38855" y="181.95001" id="svg_17" font-size="12" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve">Forgot my password</text>
  </g>
 </svg>
