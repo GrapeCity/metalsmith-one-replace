@@ -21,7 +21,7 @@ metalsmith(__dirname)
           'f4':'Grapes'
         }
       },{
-        priority: 5,
+        priority: 1,
         type: 'replace',
         filePattern: '.svg$',
         regPatterns: {
@@ -30,6 +30,14 @@ metalsmith(__dirname)
           '(xml([a-z:-A-Z0-9]+))=[\"]?((?:.(?![\"]?\s+(?:\S+)=|[>\"]))+.)[\"]?([ ]+)?':'',
           '^\s*$':'',
           '([a-z:-A-Z0-9]+)="null"?([ ]+)?':''
+        }
+      },{
+        priority: 5,
+        type: 'replace',
+        filePattern: '.md$',
+        regPatterns: {
+          '{#img (.*?)}':'<img $1>',
+          '{#bold (.*?)}':'<b>$1</b>'
         }
       }
     ]
