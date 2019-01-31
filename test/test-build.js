@@ -2,10 +2,10 @@ var metalsmith = require('metalsmith');
 var markdown = require('metalsmith-markdown');
 var templates = require('metalsmith-templates');
 var permalinks = require('metalsmith-permalinks');
-var vreplace = require('..');
+var varreplace = require('..');
 
 metalsmith(__dirname)
-    .use(vreplace({
+    .use(varreplace({
       consoleLog: true,
       enabled: true,
       actions: [{
