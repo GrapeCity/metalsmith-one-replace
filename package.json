@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-var-replace",
-  "version": "0.0.2",
+  "version": "0.0.9",
   "description": "A Metalsmith plugin",
   "keywords": [
     "metalsmith",
