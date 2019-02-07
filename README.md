@@ -16,7 +16,7 @@ Example
         },{
         priority: 20,
         type:'var',
-        keyValues:{
+        varValues:{
             'f1':'Apple',
             'f2':'Orange',
             'f3':'Banana'
@@ -24,7 +24,7 @@ Example
         priority: 1,
         type:'replace',
         fileFilter:'.svg$',
-        regPatterns:{
+        replacePatterns:{
             '^\s*$':'',
             '<(([a-z]+)*[^>]+)\/>':'<$1></$2>',
             '([a-z:-A-Z0-9]+)="null"?([ ]+)?':''
