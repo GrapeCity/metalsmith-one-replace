@@ -7,8 +7,9 @@ var varreplace = require('..');
 metalsmith(__dirname)
     .use(varreplace({
       consoleLog: true,
-      enabled: true,
-      actions: [{
+      enabled: false,
+      actions: [
+      {
         priority: 10,
         type: 'file'
       },{
