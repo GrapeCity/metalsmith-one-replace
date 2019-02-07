@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-var-replace",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Metalsmith plugin",
   "keywords": [
     "metalsmith",
@@ -10,12 +10,13 @@
   "license": "MIT",
   "main": "lib",
   "dependencies": {
+  },
+  "devDependencies": {
     "metalsmith": "^2.3.0",
     "metalsmith-markdown": "^1.1.0",
     "metalsmith-permalinks": "^2.0.0",
     "metalsmith-templates": "^0.7.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node 'test/test-build'"
   },
