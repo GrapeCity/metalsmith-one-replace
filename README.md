@@ -37,7 +37,7 @@ Example
         priority:5,
         type:'replace',
         fileFilter:'.md$',
-        regPatterns:{
+        replacePatterns:{
             '{#img (.*?)}':'<img $1>',
             '{#bold (.*?)}':'<b>$1</b>'
         }
