@@ -13,22 +13,26 @@ Example
     actions: [{
         priority: 10,
         type:'file'
-        },{
+    },{
         priority: 20,
         type:'var',
         varValues:{
             'f1':'Apple',
             'f2':'Orange',
             'f3':'Banana'
-        },{
+        }
+    },{
         priority: 1,
         type:'replace',
         fileFilter:'.svg$',
         replacePatterns:{
+            '\<![ \r\n\t]*(--([^\-]|[\r\n]|-[^\-])*--[ \r\n\t]*)\>':'',
+            '(xml([a-z:-A-Z0-9]+))=[\"]?((?:.(?![\"]?\s+(?:\S+)=|[>\"]))+.)[\"]?([ ]+)?':'',
             '^\s*$':'',
             '<(([a-z]+)*[^>]+)\/>':'<$1></$2>',
             '([a-z:-A-Z0-9]+)="null"?([ ]+)?':''
-        },{
+        }
+    },{
         enabled: false,
         priority:5,
         type:'replace',
@@ -37,7 +41,7 @@ Example
             '{#img (.*?)}':'<img $1>',
             '{#bold (.*?)}':'<b>$1</b>'
         }
-    ]
+    }]
 }
 ...
 ```
