@@ -1,10 +1,18 @@
 {
   "name": "metalsmith-var-replace",
-  "version": "0.0.9",
-  "description": "A Metalsmith plugin",
+  "version": "0.1.0",
+  "description": "A single Metalsmith plugin for multiple types of replace action",
   "keywords": [
     "metalsmith",
-    "plugin"
+    "plugin",
+    "replace",
+    "custom tag",
+    "tag",
+    "regex",
+    "regular expression",
+    "markdown",
+    "insert file",
+    "replace variable"
   ],
   "author": "GrapeCity",
   "license": "MIT",

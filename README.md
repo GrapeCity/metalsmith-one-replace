@@ -1,10 +1,62 @@
 # metalsmith-var-replace
 
-A Metalsmith/markdown plugin for multiple type of replace (inserting content from other file, variable substitution, regex replacement) within the markdown files.
+A single Metalsmith/markdown plugin to perform multiple types of replace action within markdown files. The supported replace functions are:
+
+* Insert content from other file
+* Variable substitution
+* Regex replacement
+
+The default tags (override by defining custom regular expression in **keyRegex** config attribute) are :
+
+* {#insert ...} - to insert a file
+* {#var ...} - for variable substitution
+
+For detailed usage, refer to [wiki](https://github.com/GrapeCity/metalsmith-var-replace/wiki).
 
 ## Config
 
-Example
+Example - Simple (to insert file using {#insert} custom tag)
+```js
+...
+{
+    actions:[{
+        type:'file'
+    }]
+}
+...
+```
+
+Example - Simple (to substitute variable using {#var} custom tag})
+```js
+...
+{
+    actions:[{
+        type:'var',
+        varValues:{
+            'f1':'Apple',
+            'f2':'Orange'
+        }
+    }]
+}
+...
+```
+
+Example - Simple (defining custom tag {#img} to use instead of <img> within markdown files)
+```js
+...
+{
+    actions:[{
+        type:'replace',
+        fileFilter:'.md$',
+        replacePatterns:{
+            '{#img (.*?)}':'<img $1>'
+        }
+    }]
+}
+...
+```
+
+Example - Detailed
 ```js
 ...
 {
