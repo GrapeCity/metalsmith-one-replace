@@ -1,4 +1,4 @@
-# metalsmith-var-replace
+# metalsmith-one-replace
 
 A single Metalsmith/markdown plugin to perform multiple types of replace action within markdown files. The supported replace functions are:
 
