@@ -1,5 +1,5 @@
 {
-  "name": "metalsmith-var-replace",
+  "name": "metalsmith-one-replace",
   "version": "0.1.0",
   "description": "A single Metalsmith plugin for multiple types of replace action",
   "keywords": [
