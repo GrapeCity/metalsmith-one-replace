@@ -11,7 +11,7 @@ The default tags (override by defining custom regular expression in **keyRegex**
 * {#insert ...} - to insert a file
 * {#var ...} - for variable substitution
 
-For detailed usage, refer to [wiki](https://github.com/GrapeCity/metalsmith-var-replace/wiki).
+For detailed usage, refer to [wiki](https://github.com/GrapeCity/metalsmith-one-replace/wiki).
 
 ## Config
 
@@ -120,7 +120,7 @@ More information about config attributes:
 
 ## Documentation
 
-Refer to the [wiki](https://github.com/GrapeCity/metalsmith-var-replace/wiki)
+Refer to the [wiki](https://github.com/GrapeCity/metalsmith-one-replace/wiki)
 
 ## License
 
