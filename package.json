@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GrapeCity/metalsmith-var-replace.git"
+    "url": "git+https://github.com/GrapeCity/metalsmith-one-replace.git"
   },
   "bugs": {
-    "url": "https://github.com/GrapeCity/metalsmith-var-replace/issues"
+    "url": "https://github.com/GrapeCity/metalsmith-one-replace/issues"
   },
-  "homepage": "https://github.com/GrapeCity/metalsmith-var-replace#readme",
+  "homepage": "https://github.com/GrapeCity/metalsmith-one-replace#readme",
   "directories": {
     "test": "test"
   }
