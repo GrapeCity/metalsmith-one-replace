@@ -14,7 +14,7 @@ The default tags (override by defining custom regular expression in **keyRegex**
 For detailed usage, refer to [wiki](https://github.com/GrapeCity/metalsmith-one-replace/wiki).
 
 ## Installation
-```js
+```bash
 $ npm install metalsmith-one-replace
 ```
 
