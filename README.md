@@ -21,7 +21,7 @@ $ npm install metalsmith-one-replace
 ## Config
 
 Example - Simple (to insert file using {#insert} custom tag)
-```json
+```js
 ...
 {
     actions:[{
@@ -32,7 +32,7 @@ Example - Simple (to insert file using {#insert} custom tag)
 ```
 
 Example - Simple (to substitute variable using {#var} custom tag})
-```json
+```js
 ...
 {
     actions:[{
@@ -47,7 +47,7 @@ Example - Simple (to substitute variable using {#var} custom tag})
 ```
 
 Example - Simple (defining custom tag {#img} to use instead of <img> within markdown files)
-```json
+```js
 ...
 {
     actions:[{
@@ -62,7 +62,7 @@ Example - Simple (defining custom tag {#img} to use instead of <img> within mark
 ```
 
 Example - Detailed
-```json
+```js
 ...
 {
     consoleLog: false,
