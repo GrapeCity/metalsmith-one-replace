@@ -13,6 +13,11 @@ The default tags (override by defining custom regular expression in **keyRegex**
 
 For detailed usage, refer to [wiki](https://github.com/GrapeCity/metalsmith-one-replace/wiki).
 
+## Installation
+```js
+$ npm install metalsmith-one-replace
+```
+
 ## Config
 
 Example - Simple (to insert file using {#insert} custom tag)
