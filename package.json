@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-one-replace",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "A single Metalsmith plugin for multiple types of replace action",
   "keywords": [
     "metalsmith",
@@ -17,14 +17,8 @@
   "author": "GrapeCity",
   "license": "MIT",
   "main": "lib",
-  "dependencies": {
-  },
-  "devDependencies": {
-    "metalsmith": "^2.3.0",
-    "metalsmith-markdown": "^1.1.0",
-    "metalsmith-permalinks": "^2.0.0",
-    "metalsmith-templates": "^0.7.0"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "node 'test/test-build'"
   },
