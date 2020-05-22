@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-one-replace",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A single Metalsmith plugin for multiple types of replace action",
   "keywords": [
     "metalsmith",
