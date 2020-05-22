@@ -5,11 +5,13 @@ A single Metalsmith/markdown plugin to perform multiple types of replace action 
 * Insert content from other file
 * Variable substitution
 * Regex replacement
+* Replace tags with strings build by a pattern
 
 The default tags (override by defining custom regular expression in **keyRegex** config attribute) are :
 
 * {#insert ...} - to insert a file
 * {#var ...} - for variable substitution
+* {#banner ...} - to insert set of HTML tags based on pattern
 
 For detailed usage, refer to [wiki](https://github.com/GrapeCity/metalsmith-one-replace/wiki).
 
@@ -61,6 +63,20 @@ Example - Simple (defining custom tag {#img} to use instead of <img> within mark
 ...
 ```
 
+Example - Simple (defining custom tag {#img} to use instead of <img> within markdown files)
+```js
+...
+{
+    actions:[{
+        type:'build',
+        fileFilter:'.md$',
+        outerBody:'<div class="banner">{{innerBody}}</div>',
+        innerBody:'<div class="banner-item"><div class="item-box"><a href="{{1}}"><div class="item-box-image"><img src="{{2}}"></div><div class="item-box-title">{{0}}</div><div class="item-box-desc">{{3}}</div></a></div></div>'
+    }]
+}
+...
+```
+
 Example - Detailed
 ```js
 ...
@@ -98,6 +114,14 @@ Example - Detailed
             '{#img (.*?)}':'<img $1>',
             '{#bold (.*?)}':'<b>$1</b>'
         }
+    },{
+        enabled: true,
+        priority:5,
+        type:'build',
+        fileFilter:'.md$',
+        tag:'^{#banner (.*)}',
+        outerBody:'<div class="banner">{{innerBody}}</div>',
+        innerBody:'<div class="banner-item"><div class="item-box"><a href="{{1}}"><div class="item-box-image"><img src="{{2}}"></div><div class="item-box-title">{{0}}</div><div class="item-box-desc">{{3}}</div></a></div></div>'
     }]
 }
 ...
@@ -111,7 +135,7 @@ More information about config attributes:
   * `priority` (optional number) - to specify the sequence order while processing
   * `enabled` (optional boolean default:`true`) - to enable/disable a specific action
   * `fileFilter` (optional regex string default:`(.*?)`) - to filter files for processing under a specific action
-  * `type` (string values are `var`, `file`, and `replace`) is mandatory - to specify the routine while processing
+  * `type` (string values are `var`, `file`, `replace` and `build`) is mandatory - to specify the routine while processing
     * attributes when `type` is `var`
       * `keyRegex` (optional regex string default:`{#var (.*?)}`) - regex to find the tag (example `{#var}`) with the variable name as the parameter
       * `varValues` (key-value pair object) is mandatory - with variable name and it's value as key-value pair
@@ -122,6 +146,10 @@ More information about config attributes:
       * `removeFile` (optional boolean default:`true`) - remove the file from target folder after inserting the content
     * attributes when `type` is `replace`
       * `replacePatterns` (key-value pair object) is mandatory - regex find and replace string as key-value pair
+    * attributes when `type` is `build`
+      * `tag` (optional regex string default:`^{#banner (.*)}`) = regex to find the tag (example `{#banner}` with the JSON object as parameter)
+      * `outerBody` - string containing HTML tags (to be used once)
+      * `innerBody` - string containing HTML tags with {{}} placeholders. Based on the elements of JSON object specified as the parameter, that many times this string will be duplicated, and {{}} placeholders will be replaced with the value of array within the JSON object.
 
 ## Documentation
 
